@@ -65,4 +65,6 @@ repressed_count = 0
 shameful_memories.each do |post|
   repressed_count = repressed_count + 1
   puts "Repressing post id #{post.itemid}, #{repressed_count} of #{shame_count}"
+  post.security = :private
+  LiveJournal::Request::EditEvent.new(user, post).run
 end
