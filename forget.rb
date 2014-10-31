@@ -1,6 +1,3 @@
-#!/usr/bin/env ruby
-# vim: ft=ruby
-
 require 'dotenv'
 require 'livejournal'
 
